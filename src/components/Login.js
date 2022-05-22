@@ -43,7 +43,7 @@ const Login = (props) => {
   const handleClick = () => {
     console.log({ email, password });
     axios
-      .post("http://ec2-3-17-180-35.us-east-2.compute.amazonaws.com:6868/api/login", { email, password })
+      .post("https://ec2-3-17-180-35.us-east-2.compute.amazonaws.com:6868/api/login", { email, password })
       .then((res) => {
         //console.log(res.data.user_id);
         userId = res.data.user_id;
@@ -57,7 +57,7 @@ const Login = (props) => {
   const handleSignUpClick = () => {
     console.log({ email, password });
     axios
-      .post("http://ec2-3-17-180-35.us-east-2.compute.amazonaws.com:6868/api/signup", { email, password })
+      .post("https://ec2-3-17-180-35.us-east-2.compute.amazonaws.com:6868/api/signup", { email, password })
       .then((res) => props.setIsLoggedIn(true))
       .catch((err) => console.log(err));
   };
