@@ -58,7 +58,10 @@ const Login = (props) => {
     console.log({ email, password });
     axios
       .post("https://srhfynoce2.execute-api.us-east-2.amazonaws.com/default/signup", { email, password })
-      .then((res) => props.setIsLoggedIn(true))
+      .then((res) => {
+        props.setIsLoggedIn(true);
+        Cookies.set("userId", userId, { expires: 1 });
+      })
       .catch((err) => console.log(err));
   };
   if (props.isLoggedIn) {
