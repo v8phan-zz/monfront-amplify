@@ -47,7 +47,7 @@ const Comment = (props) => {
   const getComments = () => {
     //console.log('getComments')
     axios
-      .get("https://ec2-3-17-180-35.us-east-2.compute.amazonaws.com:6868/api/comment", { params: { blog_id } })
+      .get("https://srhfynoce2.execute-api.us-east-2.amazonaws.com/default/comment", { params: { blog_id } })
       .then((res) => {
         setComments(res.data.RESULT);
         console.log(res.data.RESULT, blog_id);
@@ -62,7 +62,7 @@ const Comment = (props) => {
   const handleClick = () => {
     console.log({ comment, user_id });
     axios
-      .post("https://ec2-3-17-180-35.us-east-2.compute.amazonaws.com:6868/api/comment", { comment, blog_id, user_id })
+      .post("https://srhfynoce2.execute-api.us-east-2.amazonaws.com/default/comment", { comment, blog_id, user_id })
       .then((res) => {
         console.log(res);
       })
