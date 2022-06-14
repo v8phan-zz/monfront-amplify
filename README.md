@@ -1,4 +1,4 @@
-Front end portion of the funky monkey blog built with React and deployed to AWS Amplify.
+Front end portion of the Funky Monkey blog built with React and deployed to AWS Amplify.
 
 Site is live at https://main.d2vyvgao2aaa19.amplifyapp.com/.
 
